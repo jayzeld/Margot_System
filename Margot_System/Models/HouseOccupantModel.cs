@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Margot_System.Models;
 
-public partial class HouseOccupantTb
+public partial class HouseOccupantModel
 {
     public int Id { get; set; }
 
@@ -19,5 +19,5 @@ public partial class HouseOccupantTb
 
     public string? SourceIncome { get; set; }
 
-    public virtual ICollection<AddPeopleTb> AddPeopleTbs { get; set; } = new List<AddPeopleTb>();
+    public virtual ICollection<ProfileModel> AddPeopleTbs { get; set; } = new List<ProfileModel>();
 }

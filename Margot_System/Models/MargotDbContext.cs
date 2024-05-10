@@ -15,15 +15,15 @@ public partial class MargotDbContext : DbContext
     {
     }
 
-    public virtual DbSet<AddPeopleTb> AddPeopleTbs { get; set; }
+    public virtual DbSet<ProfileModel> AddPeopleTbs { get; set; }
 
-    public virtual DbSet<DashboardTb> DashboardTbs { get; set; }
+    public virtual DbSet<DashboardModel> DashboardTbs { get; set; }
 
-    public virtual DbSet<HouseOccupantTb> HouseOccupantTbs { get; set; }
+    public virtual DbSet<HouseOccupantModel> HouseOccupantTbs { get; set; }
 
-    public virtual DbSet<LoginTb> LoginTbs { get; set; }
+    public virtual DbSet<LoginModel> LoginTbs { get; set; }
 
-    public virtual DbSet<RegisterTb> RegisterTbs { get; set; }
+    public virtual DbSet<RegisterModel> RegisterTbs { get; set; }
 
 //    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -31,7 +31,7 @@ public partial class MargotDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<AddPeopleTb>(entity =>
+        modelBuilder.Entity<ProfileModel>(entity =>
         {
             entity.ToTable("AddPeopleTb");
 
@@ -119,7 +119,7 @@ public partial class MargotDbContext : DbContext
                 .HasConstraintName("FK_AddPeopleTb_HouseOccupantTb");
         });
 
-        modelBuilder.Entity<DashboardTb>(entity =>
+        modelBuilder.Entity<DashboardModel>(entity =>
         {
             entity.ToTable("DashboardTb");
 
@@ -134,7 +134,7 @@ public partial class MargotDbContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<HouseOccupantTb>(entity =>
+        modelBuilder.Entity<HouseOccupantModel>(entity =>
         {
             entity.ToTable("HouseOccupantTb");
 
@@ -155,7 +155,7 @@ public partial class MargotDbContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<LoginTb>(entity =>
+        modelBuilder.Entity<LoginModel>(entity =>
         {
             entity.ToTable("LoginTb");
 
@@ -167,7 +167,7 @@ public partial class MargotDbContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<RegisterTb>(entity =>
+        modelBuilder.Entity<RegisterModel>(entity =>
         {
             entity.ToTable("RegisterTb");
 

@@ -5,13 +5,13 @@ using System;
 
 namespace Margot_System.Controllers
 {
-    public class RegisterController(UserManager<LoginTb> userManager, MargotDbContext context) : Controller
+    public class RegisterController(UserManager<LoginModel> userManager, MargotDbContext context) : Controller
     {
-        private readonly UserManager<LoginTb> _userManager = userManager;
+        private readonly UserManager<LoginModel> _userManager = userManager;
         private readonly MargotDbContext _context = context;
 
         [HttpPost]
-        public IActionResult Index(RegisterTb model)
+        public IActionResult Index(RegisterModel model)
         {
             if (ModelState.IsValid)
             {
@@ -23,7 +23,7 @@ namespace Margot_System.Controllers
                         return View(model);
                     }
 
-                    var user = new LoginTb
+                    var user = new LoginModel
                     {
                         UserName = model.Uname
                     };
@@ -32,7 +32,7 @@ namespace Margot_System.Controllers
 
                     if (result.Succeeded)
                     {
-                        var registerEntry = new RegisterTb
+                        var registerEntry = new RegisterModel
                         {
                             Fname = model.Fname,
                             Lname = model.Lname,
