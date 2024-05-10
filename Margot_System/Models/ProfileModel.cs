@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Margot_System.Models;
 
-public partial class AddPeopleTb
+public partial class ProfileModel
 {
     public int Id { get; set; }
 
@@ -65,7 +65,7 @@ public partial class AddPeopleTb
 
     public string? Employer { get; set; }
 
-    public virtual DashboardTb? Dashboard { get; set; }
+    public virtual DashboardModel? Dashboard { get; set; }
 
-    public virtual HouseOccupantTb? Occupant { get; set; }
+    public virtual HouseOccupantModel? Occupant { get; set; }
 }

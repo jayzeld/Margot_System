@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Margot_System.Models;
 
-public partial class DashboardTb
+public partial class DashboardModel
 {
     public int Id { get; set; }
 
@@ -23,5 +23,5 @@ public partial class DashboardTb
 
     public bool? Resident { get; set; }
 
-    public virtual ICollection<AddPeopleTb> AddPeopleTbs { get; set; } = new List<AddPeopleTb>();
+    public virtual ICollection<ProfileModel> AddPeopleTbs { get; set; } = new List<ProfileModel>();
 }

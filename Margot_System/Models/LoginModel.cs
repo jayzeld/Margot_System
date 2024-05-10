@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Margot_System.Models;
 
-public partial class LoginTb
+public partial class LoginModel
 {
     public int Id { get; set; }
 
@@ -11,5 +11,5 @@ public partial class LoginTb
 
     public string? Password { get; set; }
 
-    public virtual ICollection<RegisterTb> RegisterTbs { get; set; } = new List<RegisterTb>();
+    public virtual ICollection<RegisterModel> RegisterTbs { get; set; } = new List<RegisterModel>();
 }

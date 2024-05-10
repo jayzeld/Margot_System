@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Margot_System.Models;
 
-public partial class RegisterTb
+public partial class RegisterModel
 {
     public int Id { get; set; }
 
@@ -21,5 +21,5 @@ public partial class RegisterTb
 
     public int? Uid { get; set; }
 
-    public virtual LoginTb? UidNavigation { get; set; }
+    public virtual LoginModel? UidNavigation { get; set; }
 }
